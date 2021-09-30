@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="https://imgur.com/CILKGax.png" type="image/x-icon"/>
+    <title>Xuân Phi</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+	
+</head>
+
+
+<body>
+
+<center>
+     <audio width="200" height="200" controls autoplay>
+         <source src="pp.mp3" type="audio/mp3">
+          
+     </audio> 
+</center>
+
+
+          
+     
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+			
+			
+				
+				<!-- Phần chém gió các thử của bạn ở đây -->
+                Xuân qua hạ tới thu về đông sang...!!!<br/><br/>
+                <span class="comments">Các cụ có câu. </span><br/>
+                Tình yêu như bát bún riêu<br/><br/>
+				
+                <span class="comments">Ăn mà không hết, </span><br/>
+                Để chiều nó thiu <br/><br/>
+				
+                <span class="comments">Mà đố ai cắt nghĩa được tình yêu </span><br/>
+                Có khó gì đâu một buổi chiều <br/><br/>
+				
+                <span class="comments">Bóng em lấp ló bên cây cầu khỉ </span><br/>
+                Nhìn em duyên dáng thế là yêu <br/><br/>               			
+                <span class="comments">Muối ba năm muối đang còn mặn</span><br/>
+                Gừng chín tháng gừng hãy còn cay! <br/><br/>
+	        <span class="comments">Đôi ta tình nặng nghĩa dày </span><br/>
+                Có xa nhau đi nữa, ba vạn sáu ngàn ngày mới xa! <br/><br/>
+	
+
+                
+             
+              </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                       Tác phẩm: Đường về xóm tôi!
+                        <div id="Con đường xóm nhỏ thôn quê"></div>
+                    </div>
+                    <div id="loveu">
+                              Con đường nho nhỏ thôn quê<br/>
+                                 Một màu xanh thẳm bờ đê xóm làng<br/>
+                              Tuổi thơ là khúc nhạc vàng<br/> 
+                                 Ve sầu cất tiếng ngân vang trưa hè .<be/> 
+                        <div class="signature"><a target="_blank"  style="text-decoration: none">Tác giả: Xuân Phi</a>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="text-align:center;margin:0px 0; font:normal 12px/20px 'MicroSoft YaHei';">
+            
+            </div>
+            <script type="text/javascript">
+                var offsetX = $("#loveHeart").width() / 2;
+                var offsetY = $("#loveHeart").height() / 2 - 55;
+                var together = new Date();
+				
+				<!--Ngày bạn bắt đầu yêu-->
+                together.setFullYear(2016, 9, 9);	
+				
+                together.setHours(20);
+                together.setMinutes(0);
+                together.setSeconds(0);
+                together.setMilliseconds(0);
+
+                if(!document.createElement('canvas').getContext){
+                    var msg = document.createElement("div");
+                    msg.id = "errorMsg";
+                    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+                    document.body.appendChild(msg);
+                    $("#code").css("display", "none")
+                    $("#copyright").css("position", "absolute");
+                    $("#copyright").css("bottom", "10px");
+                    document.execCommand("stop");
+                }else{
+                    setTimeout(function(){
+                        startHeartAnimation();
+                    }, 5000);
+
+                    timeElapse(together);
+                    setInterval(function(){
+                        timeElapse(together);
+                    }, 500);
+
+                    adjustCodePosition();
+                    $("#code").typewriter();
+                }
+            </script>
+			<!--Thay đổi hình nền-->
+			<style>
+			body{
+			 background: url(https://img.lovepik.com/photo/40015/3925.jpg_wh300.jpg);
+			 }
+			</style>
+
+            <script>
+            if(typeof $pdj == 'undefined'){
+                document.write('<' + 'script');
+                document.write(' language="javascript"');
+                document.write(' type="text/javascript"');
+                document.write(' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">');
+                document.write('</' + 'script' + '>')
+            }</script>
+            <script>if(typeof $pdj == 'undefined'){
+                var $pdj = jQuery.noConflict()
+            }
+           
+            }
+            if(!flash_urls){
+                var flash_urls = Array()
+            }
+            image_urls['corazon'] = window.location.href + "images/heart.png";
+            $pdj(document).ready(function(){
+                var c = $pdj(window).width();
+                var d = $pdj(window).height();
+                var e = function(a, b){
+                    return Math.round(a + (Math.random() * (b - a)))
+                };
+                var f = function(a){
+                    setTimeout(function(){
+                        a.css({
+                            left: e(0, c) + 'px',
+                            top: '-30px',
+                            display: 'block',
+                            opacity: '0.' + e(10, 100)
+                        }).animate({top: (d - 10) + 'px'}, e(8500, 10000), function(){
+                            $pdj(this).fadeOut('slow', function(){
+                                f(a)
+                            })
+                        })
+                    }, e(1, 9000))
+                };
+                $pdj('<div></div>').attr('id', 'corazonDiv').css({
+                    position: 'fixed',
+                    width: (c - 20) + 'px',
+                    height: '1px',
+                    left: '0px',
+                    top: '-5px',
+                    display: 'block'
+                }).appendTo('body');
+                for(var i = 1; i <= 15; i++){
+                    var g = $pdj('<img/>').attr('src', image_urls['corazon']).css({
+                        position: 'absolute',
+                        left: e(0, c) + 'px',
+                        top: '-30px',
+                        display: 'block',
+                        opacity: '0.' + e(10, 100),
+                        'margin-left': 0
+                    }).addClass('corazonDrop').appendTo('#corazonDiv');
+                    f(g);
+                    g = null
+                }
+                ;
+                var h = 0;
+                var j = 0;
+                $pdj(window).resize(function(){
+                    c = $pdj(window).width();
+                    d = $pdj(window).height()
+                })
+            });</script>
+
+			<style>
+			body{
+				 background: url (https://img.lovepik.com/photo/40015/3925.jpg_wh300.jpg) no-repeat center center fixed;
+				 margin:0; padding:0; font-size:12px;overflow:auto;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+			#words{font-family:"sans-serif";width:500px;font-size:24px;color:rgb(134, 0, 16);}
+			#code .comments{color:#1e6501}
+			#code{float:left;width:400px;height:440px;color:#330442;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:14px;}
+			#loveu {
+				padding: 10px;
+				font-size: 22px;
+				margin-top: 30px;
+				margin-right:40px;
+				text-align: right;
+				
+				}
+			</style>
+
+</body>
+</html>
